@@ -1,0 +1,21 @@
+{
+  "name": "topmovie",
+  "usedConcepts": {
+    "movie": {
+      "name": "property",
+      "config": {
+        "schema": {
+          "title": "Movie", "type": "object",
+          "properties": { "title": { "type": "string" } },
+          "required": ["title"]
+        }
+      }
+    },
+    "authentication": {},
+    "scoring": {}
+  },
+  "routes": [
+    { "path": "", "component": "landing" },
+    { "path": "/top", "component": "top" }
+  ]
+}

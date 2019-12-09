@@ -1,0 +1,16 @@
+<dv.component name="top">
+  <authentication.logged-in />
+  <h1>topmovie</h1>
+  <dv.tx>
+    <dv.gen-id />
+    <movie.create-object id=dv.gen-id.id />
+    <scoring.create-score value=0 hidden=true
+      sourceId=authentication.logged-in.user?.id targetId=dv.gen-id.id />
+    <authentication.authenticate id=authentication.logged-in.user?.id
+      hidden=true />
+    <dv.link />
+  </dv.tx>
+  <scoring.show-targets-by-score showAscending=false
+    noTargetsText="No movies yet"
+    showTarget=<topmovie.show-movie target=$target userId=authentication.logged-in.user?.id /> />
+</dv.component>

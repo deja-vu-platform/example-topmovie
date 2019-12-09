@@ -1,0 +1,13 @@
+<dv.component name="show-movie">
+  <movie.show-object id=$target.id includeTimestamp=true hidden=true />
+  {{movie.show-object.loadedObject?.title}} - {{$target.total}} points
+  submitted <dv.show-date date=movie.show-object.loadedObject?.timestamp
+      format="time-ago" />
+  <dv.tx>
+    <scoring.create-score submitMatIconName="arrow_drop_up"
+      sourceId=$userId targetId=$target.id
+      showDoneMessage=false showOptionToInputValue=false value=1 />
+    <authentication.authenticate id=$userId hidden=true />
+    <dv.link />
+  </dv.tx>
+</dv.component>
