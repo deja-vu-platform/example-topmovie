@@ -1,11 +1,13 @@
 <dv.component name="landing">
-  <h1>topmovie</h1>
-  <h2>login</h2>
-  <dv.tx>
-    <authentication.sign-in /><dv.link href="/top" hidden=true />
-  </dv.tx>
-  <h2>register</h2>
-  <dv.tx>
-    <authentication.register-user /><dv.link href="/top" hidden=true />
-  </dv.tx>
+  <nav><h1>topmovie</h1></nav>
+  <main class="side-by-side">
+    <dv.tx>
+      <h2>login</h2>
+      <authentication.sign-in /><dv.link href="/top" hidden=true />
+    </dv.tx>
+    <dv.tx>
+      <h2>register</h2>
+      <authentication.register-user /><dv.link href="/top" hidden=true />
+    </dv.tx>
+  </main>
 </dv.component>

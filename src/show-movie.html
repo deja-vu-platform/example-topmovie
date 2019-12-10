@@ -1,13 +1,18 @@
 <dv.component name="show-movie">
-  <movie.show-object id=$target.id includeTimestamp=true hidden=true />
-  {{movie.show-object.loadedObject?.title}} - {{$target.total}} points
-  submitted <dv.show-date date=movie.show-object.loadedObject?.timestamp
-      format="time-ago" />
-  <dv.tx>
-    <scoring.create-score submitMatIconName="arrow_drop_up"
-      sourceId=$userId targetId=$target.id
-      showDoneMessage=false showOptionToInputValue=false value=1 />
-    <authentication.authenticate id=$userId hidden=true />
-    <dv.link />
-  </dv.tx>
+  <div class="movie">
+    <dv.tx>
+      <scoring.create-score submitMatIconName="arrow_drop_up"
+        sourceId=$user.id targetId=$target.id
+        showDoneMessage=false showOptionToInputValue=false value=1 />
+      <authentication.authenticate id=$user.id hidden=true />
+      <dv.link />
+    </dv.tx>
+    <div class="movie-info">
+      <movie.show-object id=$target.id includeTimestamp=true hidden=true />
+      <strong>{{movie.show-object.loadedObject?.title}}</strong>
+      | <em>{{$target.total}} points</em> | submitted by {{$user.username}}
+      <dv.show-date date=movie.show-object.loadedObject?.timestamp
+          format="time-ago" />
+    </div>
+  </div>
 </dv.component>

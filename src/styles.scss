@@ -1,0 +1,24 @@
+@import "~@deja-vu/themes/scss/sugar.scss";
+
+.side-by-side {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lr-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.movie {
+  display: flex;
+}
+
+.movie-info {
+  padding-top: 9px;
+}
