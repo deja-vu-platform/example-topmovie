@@ -10,7 +10,7 @@
     <div class="movie-info">
       <movie.show-object id=$target.id includeTimestamp=true hidden=true />
       <strong>{{movie.show-object.loadedObject?.title}}</strong>
-      | <em>{{$target.total}} points</em> | submitted by {{$user.username}}
+      | <em>{{$target.total}} points</em> | submitted
       <dv.show-date date=movie.show-object.loadedObject?.timestamp
           format="time-ago" />
     </div>
